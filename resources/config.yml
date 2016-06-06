@@ -1,4 +1,4 @@
-#Configuration file for RestartMe v1.0.0
+#Configuration file for RestartMe v1.1.0
 broadcastInterval: 1200
 #Sets the interval of the countdown before broadcast, in seconds
 broadcastMessage: "§eServer will restart in {RESTART_FORMAT_TIME}."

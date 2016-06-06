@@ -89,7 +89,7 @@ public class RestartMeCommand extends Command{
                 case "s":
                 case "subtract":
                     if(args.length > 1){
-                        timer.addTime(Integer.parseInt(args[1]));
+                        timer.subtractTime(Integer.parseInt(args[1]));
                         sender.sendMessage(TextFormat.GREEN+"Subtracted "+args[1]+" from restart timer.");
                     }
                     else{

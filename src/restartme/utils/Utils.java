@@ -15,7 +15,7 @@ public class Utils{
             case "M": //megabyte
                 return byteLimit * Math.pow(1024, 2);
             case "K": //kilobyte
-                return byteLimit * Math.pow(1024, 1);
+                return byteLimit * 1024;
             case "B": //byte
                 return byteLimit;
             default:

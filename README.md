@@ -24,4 +24,5 @@ Main command: **restartme**, **rm**
 ###Releases:
 |Version|Release Date|Download|
 |:-------:|------------|:--------:|
-|1.0.0|?|unavailable|
+|1.0.0|June 1, 2016|[available](http://forums.nukkit.cn/resources/restartme.72/download?version=129)|
+|1.1.0|?|unavailable|

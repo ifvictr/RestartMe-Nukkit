@@ -1,6 +1,7 @@
 package restartme.task;
 
 import cn.nukkit.scheduler.PluginTask;
+import restartme.utils.Timer;
 import restartme.RestartMe;
 
 public class AutoBroadcastTask extends PluginTask<RestartMe>{
@@ -11,9 +12,10 @@ public class AutoBroadcastTask extends PluginTask<RestartMe>{
     }
     @Override
     public void onRun(int currentTick){
-        if(!this.plugin.getTimer().isPaused()){
-            if(this.plugin.getTimer().getTime() >= this.plugin.getConfig().getInt("startCountdown")){
-                this.plugin.getTimer().broadcastTime(this.plugin.getConfig().getString("broadcastMessage"), this.plugin.getConfig().getString("displayType"));
+        Timer timer = this.plugin.getTimer();
+        if(!timer.isPaused()){
+            if(timer.getTime() >= this.plugin.getConfig().getInt("startCountdown")){
+                timer.broadcastTime(this.plugin.getConfig().getString("broadcastMessage"), this.plugin.getConfig().getString("displayType"));
             }
         }
     }
