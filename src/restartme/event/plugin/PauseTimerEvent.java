@@ -10,7 +10,7 @@ public class PauseTimerEvent extends PluginEvent{
         this.value = value;
     }
     public boolean getValue(){
-        return this.value;
+        return value;
     }
     public void setValue(boolean value){
         this.value = value;

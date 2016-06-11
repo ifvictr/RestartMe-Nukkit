@@ -12,10 +12,10 @@ public class AutoBroadcastTask extends PluginTask<RestartMe>{
     }
     @Override
     public void onRun(int currentTick){
-        Timer timer = this.plugin.getTimer();
+        Timer timer = plugin.getTimer();
         if(!timer.isPaused()){
-            if(timer.getTime() >= this.plugin.getConfig().getInt("startCountdown")){
-                timer.broadcastTime(this.plugin.getConfig().getString("broadcastMessage"), this.plugin.getConfig().getString("displayType"));
+            if(timer.getTime() >= plugin.getConfig().getInt("startCountdown")){
+                timer.broadcastTime(plugin.getConfig().getString("broadcastMessage"), plugin.getConfig().getString("displayType"));
             }
         }
     }

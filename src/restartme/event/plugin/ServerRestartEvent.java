@@ -10,7 +10,7 @@ public class ServerRestartEvent extends PluginEvent{
         this.mode = mode;
     }
     public int getMode(){
-        return this.mode;
+        return mode;
     }
     public void setMode(int mode){
         this.mode = mode;

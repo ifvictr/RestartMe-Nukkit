@@ -12,7 +12,7 @@ public class RestartMeCommand extends Command{
     private RestartMe plugin;
     public RestartMeCommand(RestartMe plugin){
         super("restartme", "Shows all RestartMe commands", null, new String[]{"rm"});
-        this.setPermission("restartme.command.restartme");
+        setPermission("restartme.command.restartme");
         this.plugin = plugin;
     }
     private void sendCommandHelp(CommandSender sender){
@@ -33,11 +33,11 @@ public class RestartMeCommand extends Command{
     }
     @Override
     public boolean execute(CommandSender sender, String label, String[] args){
-        if(!this.testPermission(sender)){
+        if(!testPermission(sender)){
             return false;
         }
         if(args.length > 0){
-            Timer timer = this.plugin.getTimer();
+            Timer timer = plugin.getTimer();
             switch(args[0].toLowerCase()){
                 case "a":
                 case "add":
@@ -50,11 +50,11 @@ public class RestartMeCommand extends Command{
                     }
                     break;
                 case "help":
-                    this.sendCommandHelp(sender);
+                    sendCommandHelp(sender);
                     break;
                 case "m":
                 case "memory":
-                    String memLimit = this.plugin.getMemoryLimit();
+                    String memLimit = plugin.getMemoryLimit();
                     sender.sendMessage("Bytes: "+Runtime.getRuntime().totalMemory()+"/"+Utils.calculateBytes(memLimit));
                     sender.sendMessage("Memory-limit: "+memLimit);
                     sender.sendMessage("Overloaded: "+(Utils.isOverloaded(memLimit) ? TextFormat.GREEN+"yes" : TextFormat.RED+"no"));
@@ -106,7 +106,7 @@ public class RestartMeCommand extends Command{
             }
         }
         else{
-            this.sendCommandHelp(sender);
+            sendCommandHelp(sender);
             return false;
         }
         return true;

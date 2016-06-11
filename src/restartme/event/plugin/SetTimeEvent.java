@@ -12,9 +12,9 @@ public class SetTimeEvent extends PluginEvent{
         this.newTime = newTime;
     }
     public int getOldTime(){
-        return this.oldTime;
+        return oldTime;
     }
     public int getNewTime(){
-        return this.newTime;
+        return newTime;
     }
 }

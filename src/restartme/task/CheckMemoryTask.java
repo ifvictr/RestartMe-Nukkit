@@ -12,9 +12,9 @@ public class CheckMemoryTask extends PluginTask<RestartMe>{
     }
     @Override
     public void onRun(int currentTick){
-        if(!this.plugin.getTimer().isPaused()){
-            if(Utils.isOverloaded(this.plugin.getMemoryLimit())){
-                this.plugin.getTimer().initiateRestart(RestartMe.OVERLOADED);
+        if(!plugin.getTimer().isPaused()){
+            if(Utils.isOverloaded(plugin.getMemoryLimit())){
+                plugin.getTimer().initiateRestart(RestartMe.OVERLOADED);
             }
         }
     }
